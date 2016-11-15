@@ -1,4 +1,4 @@
-package firebase.sodhankit.com.sampleapplication.viewdownloadfromurl;
+
 
 import android.app.ProgressDialog;
 import android.graphics.Bitmap;
@@ -18,11 +18,6 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.firebase.ui.storage.images.FirebaseImageLoader;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -31,8 +26,6 @@ import java.io.InputStream;
 import java.net.URL;
 import java.nio.ByteBuffer;
 
-import firebase.sodhankit.com.sampleapplication.R;
-import firebase.sodhankit.com.sampleapplication.viewanddownload.ViewDownloadActivity;
 
 public class ViewDownloadFromUrlActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -62,9 +55,9 @@ public class ViewDownloadFromUrlActivity extends AppCompatActivity implements Vi
         pd.setCancelable(false);
         pd.show();
         if(view == buttonFetch){
-            fetchImage("http://api.androidhive.info/images/sample.jpg");
+            fetchImage("Your Image Url");
         }else if(view == buttonDownload){
-            downloadImage("http://api.androidhive.info/images/sample.jpg");
+            downloadImage("Your Image Url");
         }
     }
 
